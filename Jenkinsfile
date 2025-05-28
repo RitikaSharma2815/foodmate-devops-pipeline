@@ -2,13 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Test Failure') {
             steps {
-                echo 'Installing dependencies...'
-                sh 'npm install'
+                echo 'This should fail...'
+                sh 'exit 1'
             }
         }
     }
 }
+
 
 
