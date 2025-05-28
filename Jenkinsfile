@@ -2,14 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Test Failure') {
+        stage('Build') {
             steps {
-                echo 'This should fail...'
-                sh 'exit 1'
+                echo 'Hello from Build stage'
+                sh 'echo Building...'
             }
         }
     }
 }
-
-
 
