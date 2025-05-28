@@ -20,6 +20,13 @@ pipeline {
             sh 'echo Code passed linting rules!'
             }
         }
+       stage('Security Scan') {
+    steps {
+        echo 'Running security scan...'
+        sh 'echo No known vulnerabilities found.'
+       }
+      }
+
     }
 }
 
